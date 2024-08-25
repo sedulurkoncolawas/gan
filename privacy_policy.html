@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Web</title>
+        <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/red-hat-mono" rel="stylesheet">
+    <style>
+        body {
+            background: black;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #privacy-policy {
+          font-size: 23px;
+        }
+
+     .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #3333335f;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar img.logo {
+            width: 70px;
+            height: 45px;
+        }
+
+        .navbar .fa-times {
+            font-size: 25px;
+            margin-right: 45px;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .navbar .fa-bars {
+            font-size: 25px;
+            margin-left: 220px;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+  
+        .navbar .fa-times {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .side-nav {
+         font-family: 'Red Hat Mono', sans-serif;
+         text-align: center;
+         font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333333de;
+            color: white;
+            overflow: auto;
+            transition: left 0.4s ease;
+            transition: left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            padding-top: 60px;
+            z-index: 999;
+        }
+
+        .side-nav a {
+           margin-bottom: 25px;
+           margin-top: 25px;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .side-nav a:hover {
+            background-color: #575757;
+        }
+
+        .side-nav.active {
+            left: 0;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+            transition: opacity 0.4s ease;
+        }
+
+        .overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            font-family: monospace;
+            font-weight: bold;
+            margin-top: 80px;
+        }
+
+        .text {
+          margin-left: 15px;
+            color: white;
+            font-family: Arial;
+            white-space: pre-line;
+        }
+        
+        strong {
+          font-size: 20px;
+        }
+        
+.custom-footer {
+    padding: 20px;
+    border-radius: 10px;
+    color: #A0AEC0; /* Warna teks */
+    text-align: center;
+    margin: 40px auto;
+    max-width: 400px;
+    font-family: 'Arial', sans-serif;
+}
+
+.custom-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #A0AEC0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFF;
+    user-select: none;
+}
+  
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img class="logo" src="logo.png" alt="Logo">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+    </div>
+    <div class="overlay"></div>
+
+    <div class="side-nav">
+        <a href="index.html">Page</a>
+        <a href="#privacy-policy">Privacy Policy</a>
+    </div>
+ <h2 class="fade-in" id="privacy-policy"><span style="color: #555;">|</span> Privacy Policy</h2>
+        
+        <p class="text fade-in">
+            <strong>Effective Date: August 25, 2024</strong>
+        </p>
+        
+        <p class="text fade-in">
+            Welcome to G4n Website! We are dedicated to safeguarding your privacy and ensuring that your personal information is protected. This Privacy Policy outlines our practices regarding the collection, use, and protection of your personal information when you visit or interact with our website. By using our site, you consent to the practices described in this policy.
+        </p>
+        
+        <p class="text fade-in">
+            <strong>1. Information We Collect</strong><br>
+            We collect personal information that you voluntarily provide when you:<br>
+            - Subscribe to our newsletter<br>
+            - Interact with certain features or services on our site<br>
+            The personal information collected may include:<br>
+            - Name<br>
+            - Email address<br>
+            - Other relevant details related to our services<br>
+            In addition to personal information, we collect non-personal information automatically when you visit our website. This information helps us improve our services and your user experience and may include:<br>
+            - IP address<br>
+            - Browser type<br>
+            - Pages visited<br>
+            - Time and date of visits
+        </p>
+        
+        <p class="text fade-in">
+            <strong>2. Use of Collected Information</strong><br>
+            The information we collect is used to improve our services and enhance your experience on our website. We may use your personal information to send you updates, newsletters, and special offers that are relevant to your interests. We also use non-personal information to analyze website traffic and user engagement, which helps us to refine our website’s functionality and content.
+        </p>
+        
+        <p class="text fade-in">
+            <strong>3. Sharing of Information</strong><br>
+            We do not sell, trade, or rent your personal information to third parties. However, we may share your information with trusted service providers who assist us in operating our website and delivering our services. These third parties are contractually obligated to maintain the confidentiality of your information and are not permitted to use it for any purpose other than providing their services to us.
+        </p>
+        
+        <p class="text fade-in">
+            <strong>4. Legal Compliance and Protection</strong><br>
+            We may disclose your personal information if required by law or if we believe that such disclosure is necessary to comply with legal obligations, protect our rights, or enforce our terms of service. This includes responding to lawful requests and processes, protecting the rights and safety of our users, or investigating potential violations of our policies.
+        </p>
+        
+        <p class="text fade-in">
+            <strong>5. Data Security Measures</strong><br>
+            We take reasonable measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. While we strive to implement robust security practices, no method of transmission over the internet or electronic storage is completely secure. Therefore, we cannot guarantee the absolute security of your information.
+        </p>
+        
+        <p class="text fade-in">
+            <strong>6. Your Data Rights</strong><br>
+            You have the right to access, update, or request the deletion of your personal information that we hold. If you wish to exercise any of these rights, please contact us using the information provided below. We will respond to your request within a reasonable timeframe and in accordance with applicable laws.
+        </p>
+        
+        <p class="text fade-in">
+            <strong>7. Cookies and Tracking Technologies</strong><br>
+            Our website uses cookies and similar tracking technologies to enhance user experience and collect information about how you use our site. Cookies are small files placed on your device that help us remember your preferences and improve your browsing experience. You can manage your cookie preferences through your browser settings. Please note that disabling cookies may affect the functionality of certain features on our website.
+        </p>
+        
+        <p class="text fade-in">
+            <strong>8. Changes to This Privacy Policy</strong><br>
+            We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. Any modifications will be posted on this page with an updated effective date. We encourage you to review this policy regularly to stay informed about how we are protecting your information.
+        </p>
+        
+        <p class="text fade-in">
+            <strong>9. Third-Party Links</strong><br>
+            Our website may contain links to third-party websites that are not operated by us. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit to understand their data collection and usage practices.
+        </p>
+        
+        <p class="text fade-in">
+            <strong>10. Contact Us</strong><br>
+            If you have any questions, concerns, or feedback regarding this Privacy Policy or our privacy practices, please reach out to us at:<br>
+            Email: sayabot@gmail.com
+        </p>
+<footer class="custom-footer">
+    <p>&copy; 2024 G4n Website. All Rights Reserved.</p>
+    <div class="footer-links">
+        <a href="privacy_policy.html">Privacy Policy</a>
+    </div>
+</footer>
+    <script>
+
+        const barsIcon = document.querySelector('.fa-bars');
+        const timesIcon = document.querySelector('.fa-times');
+        const sideNav = document.querySelector('.side-nav');
+        const overlay = document.querySelector('.overlay');
+
+        barsIcon.addEventListener('click', function() {
+            sideNav.classList.add('active');
+            overlay.classList.add('active');
+            barsIcon.style.opacity = '0';
+            barsIcon.style.transform = 'scale(0)';
+            timesIcon.style.opacity = '1';
+            timesIcon.style.transform = 'scale(1)';
+        });
+
+        timesIcon.addEventListener('click', function() {
+            sideNav.classList.remove('active');
+            overlay.classList.remove('active');
+            barsIcon.style.opacity = '1';
+            barsIcon.style.transform = 'scale(1)';
+            timesIcon.style.opacity = '0';
+            timesIcon.style.transform = 'scale(0)';
+        });
+
+        overlay.addEventListener('click', function() {
+            sideNav.classList.remove('active');
+            overlay.classList.remove('active');
+            barsIcon.style.opacity = '1';
+            barsIcon.style.transform = 'scale(1)';
+            timesIcon.style.opacity = '0';
+            timesIcon.style.transform = 'scale(0)';
+        });
+        
+        window.onload = function() {
+    const fadeElems = document.querySelectorAll('.fade-in');
+    fadeElems.forEach(elem => {
+        elem.classList.add('visible');
+    });
+    typeText();
+};
+    </script>
+</body>
+</html>
