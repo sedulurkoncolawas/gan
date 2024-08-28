@@ -53,7 +53,7 @@
 
         .navbar .fa-bars {
             font-size: 25px;
-            margin-left: 220px;
+            margin-left: 240px;
             color: white;
             cursor: pointer;
             transition: opacity 0.4s ease, transform 0.4s ease;
@@ -274,11 +274,92 @@
     user-select: none;
 }
   
+.container {
+  width: 225px;
+  margin: 50px auto;
+  background-color: #F5F5F5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.container:hover {
+  transform: scale(0.95);
+}
+
+.image-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;  /* Menambahkan scroll bar horizontal */
+  scrollbar-width: auto;  /* Menyesuaikan lebar scrollbar */
+  padding-bottom: 10px;
+}
+
+.container img,
+.image-container img {
+  width: 100%;  
+  height: auto;
+  border-radius: 5px;
+}
+
+.container h3 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.container .judul {
+  margin-top: 15px;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 25px;
+  color: black;
+}
+
+.underline-short {
+  display: inline-block;
+  background-image: linear-gradient(#FFB502, #FFB502);
+  background-size: 50% 2px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 5px; 
+}
+
+.container p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Tambahkan gaya untuk scrollbar */
+.image-container::-webkit-scrollbar {
+  height: 8px;  /* Menentukan tinggi scrollbar */
+}
+
+.image-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;  /* Warna thumb scrollbar */
+  border-radius: 4px;
+}
+
+.image-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;  /* Warna track scrollbar */
+}
+
+audio {
+         display: block;
+        margin: auto;
+        width: 240px;
+        height: 50px;
+}
     </style>
 </head>
 <body>
     <div class="navbar">
-        <img class="logo" src="logo.png" alt="Logo">
+        <a href="index.html"><img class="logo" src="logo.png" alt="Logo"></a>
         <i class="fas fa-bars"></i>
         <i class="fas fa-times"></i>
     </div>
@@ -295,7 +376,64 @@
     <p class="text" id="typingText"></p>
 
     <h2 id="about" class="fade-in"><span style="color: #555;">|</span> About</h2>
-        <p class="text fade-in">Name > <span style="color: #FFB502;">G4n</span><br>Hobby > Coding<br>Fav Music > Payphone<br>Age > **<br>Game > Minecraft<br>Fav Anime > One Piece<br>Waifu > Anna Yamada</p>
+    <div class="fade-in">
+<div class="container">
+  <h2 class="judul underline-short">Hobby</h2>
+<img src="https://itbox.id/wp-content/uploads/elementor/thumbs/How-to-Code-a-Basic-Webpage-Using-HTML-Tutorial-2-qrpv260n184jwabo7sb4j03sylyx3k656wv0j4bteo.webp" alt="coding">
+    <h3>⟩ Coding ⟨</h3>
+    <p>gw suka coding walaupun masih ada copas nya awoakowk</p>
+</div>
+</div>
+    <div class="fade-in">
+<div class="container">
+  <h2 class="judul underline-short">Fav Game</h2>
+<img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2023/10/16/Minecraft-3430218599.jpg" alt="minecraft">
+    <h3>⟩ Minecraft ⟨</h3>
+    <p>gw gabisa build main menkrep cik, cuma bisa rusuh😹</p>
+</div>
+</div>
+    <div class="fade-in">
+<div class="container">
+  <h2 class="judul underline-short">Fav Anime</h2>
+<img src="https://cdn1-production-images-kly.akamaized.net/nwXgiW_hn00q7H0SKCDtFLH7RBw=/800x1066/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4722929/original/001706500_1705906267-one_piece_06.jpg" alt="minecraft">
+    <h3>⟩ One Piece ⟨</h3>
+    <p>dulu gw nolep bet sehari bisa 20+ eps skrg gw males ngelanjutin masih eps 1105👻</p>
+</div>
+</div>
+    <div class="fade-in">
+<div class="container">
+  <h2 class="judul underline-short">Waifu</h2>
+  <div class="image-container">
+    <img src="https://i.pinimg.com/564x/be/1d/1b/be1d1b6afaebda1f59c1c4aee9fe5add.jpg" alt="yamada.jpg">
+    <img src="https://i.pinimg.com/736x/c9/48/aa/c948aafc56d1e7c912b554bfc5ba1aec.jpg" alt="yamada.jpg" />
+    <img src="https://i.pinimg.com/736x/7f/9f/11/7f9f11b166dd74dcf6695bedd208788c.jpg" alt="yamada.jpg" />
+    <img src="https://i.pinimg.com/736x/ee/27/3f/ee273f31c8e27747aa96482500002c34.jpg" alt="yamada.jpg" />
+    <img src="https://i.pinimg.com/736x/ce/ea/d3/ceead3f30bfb7f5d34be60e731624209.jpg" alt="yamada.jpg" />
+    </div>
+  <h3>⟩ Anna Yamada ⟨</h3>
+  <p>waipu gw camntik bet jir😹</p>
+</div>
+</div>
+    <div class="fade-in">
+<div class="container">
+  <h2 class="judul underline-short">Fav Film</h2>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9HcTPeA41IHbp3bB9odT7Cx8T9U1XLkIyVWhMli-DP_iSlWI1nxQt244O&s=10" alt="minecraft">
+    <h3>⟩ Titanic ⟨</h3>
+    <p>gw suka bet ama ni film jir, coba lu tonton dah😈</p>
+</div>
+</div>
+    <div class="fade-in">
+<div class="container">
+  <h2 class="judul underline-short">Fav Music</h2>
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwhOObq7OaFPUCfhsX_EygFEIgJuLykBS_sLVl3kP8PC7YBPPLQ_s319QL&s=10" alt="" />
+     <h3 style="font-size: 14px;">Payphone - Maroon 5, Wiz Khalifa</h3>
+  <audio controls>
+    <source src="payphone.mp3" type="audio/mpeg">
+    Browsermu tidak mendukung tag audio, upgrade donk!
+</audio>
+    <p>lagu kesukaan gw😋</p>
+</div>
+</div>
   <h2 id="socialmedia" class="fade-in"><span style="color: #555;">|</span> Social Media</h2>
 <div class="social-media fade-in">
     <button onclick="window.location.href='https://wa.me/6283182725011?text=halo+ganteng'">
