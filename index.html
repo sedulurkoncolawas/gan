@@ -3,562 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-Web</title>
-    <link rel="shortcut icon" href="https://gan-taupe.vercel.app/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.cdnfonts.com/css/red-hat-mono" rel="stylesheet">
+    <title>Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         body {
-            background: black;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-     .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #3333335f;
-            padding: 10px 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar img.logo {
-            width: 70px;
-            height: 45px;
-        }
-
-        .navbar .fa-times {
-            font-size: 25px;
-            margin-right: 45px;
-            color: white;
-            cursor: pointer;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-        }
-
-        .navbar .fa-bars {
-            font-size: 25px;
-            margin-left: 240px;
-            color: white;
-            cursor: pointer;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-        }
-  
-        .navbar .fa-times {
-            opacity: 0;
-            transform: scale(0);
-        }
-
-        .kucing {
-          width: 125px;
-          height: 125px;
-          border-radius: 50%;
-          display: block;
-          margin: auto;
-          margin-top: 100px;
-        }
-
-        .side-nav {
-         font-family: 'Red Hat Mono', sans-serif;
-         text-align: center;
-         font-weight: bold;
-            position: fixed;
-            top: 0;
-            left: -250px;
-            width: 250px;
-            height: 100%;
-            background-color: #333333de;
-            color: white;
-            overflow: auto;
-            transition: left 0.4s ease;
-            transition: left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-            padding-top: 60px;
-            z-index: 999;
-        }
-
-        .side-nav a {
-           margin-bottom: 25px;
-           margin-top: 25px;
-            padding: 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            display: block;
-            transition: background 0.3s;
-        }
-
-        .side-nav a:hover {
-            background-color: #575757;
-        }
-
-        .side-nav.active {
-            left: 0;
-        }
-
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 500;
-            transition: opacity 0.4s ease;
-        }
-
-        .overlay.active {
-            display: block;
-            opacity: 1;
-        }
-
-        h2 {
-            text-align: center;
-            color: white;
-            font-family: monospace;
-            font-weight: bold;
-            margin-top: 80px;
-        }
-
-        .text {
-            text-align: center;
-            font-size: 15px;
-            color: white;
-            font-weight: bold;
-            font-family: Courier New;
-            white-space: pre-line;
-        }
- 
-.social-media {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.social-media button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin-bottom: 50px; /* Jarak antar ikon */
-    cursor: pointer;
-}
-
-.social-media i {
-    font-size: 60px;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.social-media button:hover i {
-    color: #FFB502;
-   transform: translateY(20px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-}
- 
-        .wrapper {
-            display: flex;
-            justify-content: center;
-            padding-top: 20px;
-        }
-
-.card {
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    width: 250px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    background-color: white;
-    animation: fadeIn 0.5s ease-out;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    background-color: #f8f8f8; /* Warna background sedikit berubah saat hover */
-    border-image: linear-gradient(to right, #FFB502, #FF6B6B) 1;
-}
-
-.card i {
-    font-size: 40px;
-    transition: color 0.3s ease;
-}
-
-        .card .fa-html5 {
-            font-size: 40px;
-            color: #e34f26;
-            margin-right: 15px;
-        }
-
-        .card .fa-css3-alt {
-            font-size: 40px;
-            color: #264de4;
-            margin-right: 15px;
-        }
-
-        .card-content {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1e1e1e;
+            color: #b0b0b0;
             display: flex;
             flex-direction: column;
-        }
-
-        .card-title {
-            font-size: 18px;
-            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
+            text-align: center;
         }
-
-        .card-number {
-            font-size: 16px;
-            color: grey;
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+            color: #f0f0f0;
         }
-        
-.custom-footer {
-    padding: 20px;
-    border-radius: 10px;
-    color: #A0AEC0; /* Warna teks */
-    text-align: center;
-    margin: 40px auto;
-    max-width: 400px;
-    font-family: 'Arial', sans-serif;
-}
-
-.custom-footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 15px;
-}
-
-.footer-links a {
-    color: #A0AEC0;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #FFF;
-    user-select: none;
-}
-  
-.container {
-  width: 225px;
-  margin: 50px auto;
-  background-color: #F5F5F5;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  overflow: hidden;
-}
-
-.container:hover {
-  transform: scale(0.95);
-}
-
-.image-container {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;  /* Menambahkan scroll bar horizontal */
-  scrollbar-width: auto;  /* Menyesuaikan lebar scrollbar */
-  padding-bottom: 10px;
-}
-
-.container img,
-.image-container img {
-  width: 100%;  
-  height: auto;
-  border-radius: 5px;
-}
-
-.container h3 {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 24px;
-  color: #333;
-}
-
-.container .judul {
-  margin-top: 15px;
-  text-align: left;
-  font-family: sans-serif;
-  font-size: 25px;
-  color: black;
-}
-
-.underline-short {
-  display: inline-block;
-  background-image: linear-gradient(#FFB502, #FFB502);
-  background-size: 50% 2px;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  padding-bottom: 5px; 
-}
-
-.container p {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 16px;
-  color: #666;
-}
-
-/* Tambahkan gaya untuk scrollbar */
-.image-container::-webkit-scrollbar {
-  height: 8px;  /* Menentukan tinggi scrollbar */
-}
-
-.image-container::-webkit-scrollbar-thumb {
-  background-color: #ccc;  /* Warna thumb scrollbar */
-  border-radius: 4px;
-}
-
-.image-container::-webkit-scrollbar-track {
-  background-color: #f1f1f1;  /* Warna track scrollbar */
-}
-
-audio {
-         display: block;
-        margin: auto;
-        width: 240px;
-        height: 50px;
-}
-
-.video-yt {
-  border-radius: 5px;
-  width: 225px;
-  height: 225px;
-}
+        p {
+            font-size: 1.2em;
+            margin: 10px 0 20px 0;
+        }
+        .error-icon {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            color: #1e1e1e;
+            background-color: #b0b0b0;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #f0f0f0;
+            color: #1e1e1e;
+        }
+        .material-icons {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html"><img class="logo" src="logo.png" alt="Logo"></a>
-        <i class="fas fa-bars"></i>
-        <i class="fas fa-times"></i>
-    </div>
-<img class="kucing" src="kucing.jpg" alt="anjas">
-    <div class="overlay"></div>
-
-    <div class="side-nav">
-        <a href="index.html">Page</a>
-        <a href="#about">About</a>
-        <a href="#socialmedia">Social Media</a>
-        <a href="#skill">Skill</a>
-    </div>
-    <h2 class="fade-in"><span style="color: #555;">|</span> Home</h2>
-    <p class="text" id="typingText"></p>
-
-    <h2 id="about" class="fade-in"><span style="color: #555;">|</span> About</h2>
-    <div class="fade-in">
-<div class="container">
-  <h2 class="judul underline-short">Hobby</h2>
-<img src="https://itbox.id/wp-content/uploads/elementor/thumbs/How-to-Code-a-Basic-Webpage-Using-HTML-Tutorial-2-qrpv260n184jwabo7sb4j03sylyx3k656wv0j4bteo.webp" alt="coding">
-    <h3>⟩ Coding ⟨</h3>
-    <p>gw suka coding walaupun masih ada copas nya awoakowk</p>
-</div>
-</div>
-    <div class="fade-in">
-<div class="container">
-  <h2 class="judul underline-short">Fav Game</h2>
-<img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2023/10/16/Minecraft-3430218599.jpg" alt="minecraft">
-    <h3>⟩ Minecraft ⟨</h3>
-    <p>gw gabisa build main menkrep cik, cuma bisa rusuh😹</p>
-</div>
-</div>
-    <div class="fade-in">
-<div class="container">
-  <h2 class="judul underline-short">Fav Anime</h2>
-<img src="https://cdn1-production-images-kly.akamaized.net/nwXgiW_hn00q7H0SKCDtFLH7RBw=/800x1066/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4722929/original/001706500_1705906267-one_piece_06.jpg" alt="One Piece">
-    <h3>⟩ One Piece ⟨</h3>
-    <p>dulu gw nolep bet sehari bisa 20+ eps skrg gw males ngelanjutin masih eps 1105👻</p>
-</div>
-</div>
-    <div class="fade-in">
-<div class="container">
-  <h2 class="judul underline-short">Waifu</h2>
-  <div class="image-container">
-    <img src="https://i.pinimg.com/564x/be/1d/1b/be1d1b6afaebda1f59c1c4aee9fe5add.jpg" alt="yamada.jpg">
-    <img src="https://i.pinimg.com/736x/c9/48/aa/c948aafc56d1e7c912b554bfc5ba1aec.jpg" alt="yamada.jpg" />
-    <img src="https://i.pinimg.com/736x/7f/9f/11/7f9f11b166dd74dcf6695bedd208788c.jpg" alt="yamada.jpg" />
-    <img src="https://i.pinimg.com/736x/ee/27/3f/ee273f31c8e27747aa96482500002c34.jpg" alt="yamada.jpg" />
-    <img src="https://i.pinimg.com/736x/ce/ea/d3/ceead3f30bfb7f5d34be60e731624209.jpg" alt="yamada.jpg" />
-    </div>
-  <h3>⟩ Anna Yamada ⟨</h3>
-  <p>waipu gw camntik bet jir😹</p>
-</div>
-</div>
-    <div class="fade-in">
-<div class="container">
-  <h2 class="judul underline-short">Fav Film</h2>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9HcTPeA41IHbp3bB9odT7Cx8T9U1XLkIyVWhMli-DP_iSlWI1nxQt244O&s=10" alt="Titanic">
-    <h3>⟩ Titanic ⟨</h3>
-    <p>gw suka bet ama ni film jir, coba lu tonton dah😈</p>
-</div>
-</div>
-    <div class="fade-in">
-<div class="container">
-  <h2 class="judul underline-short">Fav Music</h2>
- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwhOObq7OaFPUCfhsX_EygFEIgJuLykBS_sLVl3kP8PC7YBPPLQ_s319QL&s=10" alt="" />
-     <h3 style="font-size: 14px;">Payphone - Maroon 5, Wiz Khalifa</h3>
-  <audio controls>
-    <source src="payphone.mp3" type="audio/mpeg">
-    Browsermu tidak mendukung tag audio, upgrade donk!
-</audio>
-    <p>lagu kesukaan gw😋</p>
-    <hr>
-    <h2 class="judul underline-short">Fav DJ</h2>
-<iframe class="video-yt" src="https://www.youtube.com/embed/wS9dodwASRE?si=nrj2opF1RQP0JgxL" frameborder="0" allow="encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-     <h3 style="font-size: 14px;">DJ MELODY SWEET LOVE X STEREO LOVE BREAKFUNK</h3>
-</div>
-</div>
-  <h2 id="socialmedia" class="fade-in"><span style="color: #555;">|</span> Social Media</h2>
-<div class="social-media fade-in">
-    <button onclick="window.location.href='https://wa.me/6283182725011?text=halo+ganteng'">
-        <i class="fab fa-whatsapp"></i>
-    </button>
-    <button onclick="window.location.href='https://youtube.com/@g4nvolt?si=ByDU6vApbWSPYqSM'">
-        <i class="fab fa-youtube"></i>
-    </button>
-    <button onclick="window.location.href='#'">
-        <i class="fab fa-github"></i>
-    </button>
-</div>
-        <h2 id="skill" class="fade-in"><span style="color: #555;">|</span> Skill</h2>
-    <div class="wrapper fade-in">
-        <div class="card">
-            <i class="fab fa-html5"></i>
-            <div class="card-content">
-                <div class="card-title">HTML</div>
-                <div class="card-number">Uploaded 24/08/2024</div>
-            </div>
-        </div>
-    </div>
-    <div class="wrapper fade-in">
-        <div class="card">
-            <i class="fab fa-css3-alt"></i>
-            <div class="card-content">
-                <div class="card-title">CSS</div>
-                <div class="card-number">Uploaded 24/08/2024</div>
-            </div>
-        </div>
-    </div>
-<footer class="custom-footer">
-    <p>&copy; 2024 G4n Website. All Rights Reserved.</p>
-    <div class="footer-links">
-        <a href="privacy_policy.html">Privacy Policy</a>
-        <a href="update.html">Latest Update</a>
-    </div>
-</footer>
-    <script>
-        const textArray = [
-    "Hello, welcome to the ", 
-    "<span style='color: #FFB502;'>\nG4n Website</span>",
-    "\nI'm still learning to make this website.",
-    "\nSorry if it's not good.",
-    "\nI'm not very good at playing with HTML."
-];
-let index = 0;
-let arrayIndex = 0;
-const typingSpeed = 90;
-
-function typeText() {
-    if (arrayIndex < textArray.length) {
-        let currentText = textArray[arrayIndex];
-        let isHTML = currentText.startsWith("<");
-
-        if (index < currentText.length) {
-            if (isHTML) {
-                document.getElementById("typingText").innerHTML += currentText;
-                index = currentText.length;  // Skip to the end of the HTML tag
-            } else {
-                document.getElementById("typingText").innerHTML += currentText.charAt(index);
-                index++;
-            }
-            setTimeout(typeText, typingSpeed);
-        } else {
-            arrayIndex++;
-            index = 0;
-            setTimeout(typeText, typingSpeed);
-        }
-    }
-}
-
-window.onload = function() {
-    typeText();
-};
-
-        const barsIcon = document.querySelector('.fa-bars');
-        const timesIcon = document.querySelector('.fa-times');
-        const sideNav = document.querySelector('.side-nav');
-        const overlay = document.querySelector('.overlay');
-
-        barsIcon.addEventListener('click', function() {
-            sideNav.classList.add('active');
-            overlay.classList.add('active');
-            barsIcon.style.opacity = '0';
-            barsIcon.style.transform = 'scale(0)';
-            timesIcon.style.opacity = '1';
-            timesIcon.style.transform = 'scale(1)';
-        });
-
-        timesIcon.addEventListener('click', function() {
-            sideNav.classList.remove('active');
-            overlay.classList.remove('active');
-            barsIcon.style.opacity = '1';
-            barsIcon.style.transform = 'scale(1)';
-            timesIcon.style.opacity = '0';
-            timesIcon.style.transform = 'scale(0)';
-        });
-
-        overlay.addEventListener('click', function() {
-            sideNav.classList.remove('active');
-            overlay.classList.remove('active');
-            barsIcon.style.opacity = '1';
-            barsIcon.style.transform = 'scale(1)';
-            timesIcon.style.opacity = '0';
-            timesIcon.style.transform = 'scale(0)';
-        });
-        
-        window.onload = function() {
-    const fadeElems = document.querySelectorAll('.fade-in');
-    fadeElems.forEach(elem => {
-        elem.classList.add('visible');
-    });
-    typeText();
-};
-    </script>
+    <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Error Icon" class="error-icon">
+    <h1>404 Not Found</h1>
+    <p>This website is coming soon!</p>
+    <!-- <a href="index.html">
+        <span class="material-icons">keyboard_arrow_left</span>
+        Back to Home
+    </a> -->
 </body>
 </html>
